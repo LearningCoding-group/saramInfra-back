@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://prosync1.cdy4gimmf78l.ap-northeast-2.rds.amazonaws.com:3306/PCLH
+    url: ENC(aJumtFYMJ47omFBu75VtnPvOltvBHLmqqB+WehTxOhOOeJ1qruntBnO8oJDem2GziHssHWIkAIg7ASINJqu62JfCdWlfADMIuyvUQxGL611uX35GWw148A==)
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: admin
-    password: PCLH03101103
+    username: ENC(Q9grM+0D1vtgvmjIHSEm6Q==)
+    password: ENC(o71r7GxcfhNh1Qf6aAFDiHGTHgOrdoyI)
     schema:
       classpath: schema.sql
     hikari:
@@ -18,4 +18,3 @@ spring:
     mapper-locations: classpath:mapper/**/*.xml
     type-aliases-package: com.study.mull
 
-  jpa:
