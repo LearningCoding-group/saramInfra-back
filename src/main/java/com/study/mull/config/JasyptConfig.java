@@ -12,7 +12,7 @@ public class JasyptConfig {
 
 
     @Value("${jasypt.encryptor.password}")
-    private String PASSWORD_KEY;
+    private String PASSWORD_KEY; // VM Options (비밀키)
 
     @Bean("jasyptStringEncryptor")
     public StringEncryptor stringEncryptor(){
@@ -21,7 +21,7 @@ public class JasyptConfig {
         SimpleStringPBEConfig config = new SimpleStringPBEConfig();
         config.setPassword(PASSWORD_KEY);
         config.setPoolSize("1");
-        config.setAlgorithm("PBEWithMD5AndDES");
+        config.setAlgorithm("PBEWithMD5AndDES"); // 암호화 방식
         config.setStringOutputType("base64");
         config.setKeyObtentionIterations("1000");
         config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator");
