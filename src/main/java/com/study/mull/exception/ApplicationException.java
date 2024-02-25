@@ -10,6 +10,7 @@ public class ApplicationException extends RuntimeException {
     private ErrorCode errorCode;
     private String message;
 
+    //asdfasdf
     public ApplicationException(ErrorCode errorCode) {
         this.errorCode = errorCode;
         this.message = null;
