@@ -12,8 +12,4 @@ class MullApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	void test() {
-//		push test
-	}
 }
