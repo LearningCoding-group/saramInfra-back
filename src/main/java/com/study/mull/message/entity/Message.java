@@ -2,6 +2,7 @@ package com.study.mull.message.entity;
 
 import com.study.mull.member.entity.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Builder
 @Table(name = "MESSAGE")
 public class Message {
     @Id
