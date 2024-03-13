@@ -4,34 +4,36 @@ import com.study.mull.member.entity.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@Setter
+@Table(name = "MESSAGE")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "message_id")
-    private int message_id;
+    private int messageId;
 
     @Column(name = "message")
     private String message;
 
     @Column(name = "message_status")
-    private int message_status;
+    private int messageStatus;
 
     @ManyToOne
     @JoinColumn(name = "member_id")
-    private Member member_id;
+    private Member member;
 
     @Column(name = "deleted_at")
-    private LocalDateTime deleted_at;
+    private LocalDateTime deletedAt;
 
+    @CreationTimestamp
     @Column(name = "created_at")
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @Column(name = "deleted_yn")
-    private Boolean deleted_yn;
+    private Boolean deletedYn;
 }
