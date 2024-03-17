@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "message_id")
+    @Column(name = "content_id")
     private long contentId;
 
     @ManyToOne
