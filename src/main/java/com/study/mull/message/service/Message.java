@@ -16,6 +16,7 @@ public class Message {
     public com.study.mull.message.dto.Message readMessage (int messageId){
 
         Optional<com.study.mull.message.entity.Message> messageEntity = messageRepo.findById(messageId);
+
         return null;
     }
 
