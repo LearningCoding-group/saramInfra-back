@@ -17,6 +17,7 @@ public class MessageController {
     public String writeMessage (WriteMessageRequestDto dto){
         messageService.writeMessage(dto);
 
+        // TODO : redirect 해주기
         return null;
     }
 
@@ -29,6 +30,9 @@ public class MessageController {
     // 메세지 삭제하기
     @DeleteMapping("/message/{message-id}")
     public String deleteMessage(@PathVariable int messageId){
+        messageService.deleteMessage(messageId);
+
+        // TODO : redirect해주기
         return null;
     }
 

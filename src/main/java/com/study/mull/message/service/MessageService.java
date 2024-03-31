@@ -33,6 +33,7 @@ public class MessageService {
 
     // 메세지 삭제하기
     public String deleteMessage(@PathVariable int messageId){
+        messageRepository.deleteById(messageId);
         return null;
     }
 
