@@ -18,8 +18,6 @@ public class MemberController {
     @GetMapping("/member")
     public Member findMember() {
 
-
-
         return null;
     }
 
