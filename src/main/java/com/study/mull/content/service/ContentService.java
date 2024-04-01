@@ -45,8 +45,8 @@ public class ContentService {
         contentRepository.deleteById(contentId);
     }
 
-    @Transactional
-    public Content modifyContent(){
-        return null;
-    }
+//    @Transactional
+//    public Content modifyContent() {
+//
+//    }
 }
