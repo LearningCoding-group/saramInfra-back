@@ -4,7 +4,6 @@ import com.study.mull.member.entity.Member;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -12,13 +11,13 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@Builder
+@NoArgsConstructor
 @Table(name = "MESSAGE")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "message_id")
-    private int messageId;
+    private long messageId;
 
     @Column(name = "message")
     private String message;
@@ -39,4 +38,23 @@ public class Message {
 
     @Column(name = "deleted_yn")
     private Boolean deletedYn;
+
+    @Builder
+    public Message(long messageId,
+                   String message,
+                   int messageStatus,
+                   Member member,
+                   LocalDateTime deletedAt,
+                   LocalDateTime createdAt,
+                   Boolean deletedYn
+                   )
+    {
+        this.messageId = messageId;
+        this.message = message;
+        this.messageStatus = messageStatus;
+        this.member = member;
+        this.deletedAt = deletedAt;
+        this.createdAt = createdAt;
+        this.deletedYn = deletedYn;
+    }
 }
