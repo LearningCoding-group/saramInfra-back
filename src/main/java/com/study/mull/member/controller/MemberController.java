@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
 
 
-
     @GetMapping("/member")
-    public Member findMember() {
+    public Member login() {
+
 
         return null;
     }

@@ -10,15 +10,17 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
 public class MemberDto {
 
+    private Long member_id;
     private String email;
-    private long location;
-    private long warning_count;
+    private Long location;
+    private Long warning_count;
     private LocalDateTime deleted_at;
     private LocalDateTime created_at;
     private Boolean deleted_yn;
+    private Boolean banned;
+
 
 
 }

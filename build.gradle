@@ -39,6 +39,12 @@ dependencies {
 	implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.5'
 
 
+	//oauth2
+	// https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2
+	implementation 'org.springframework.security.oauth:spring-security-oauth2:2.0.14.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+
 }
 
 tasks.named('bootBuildImage') {
