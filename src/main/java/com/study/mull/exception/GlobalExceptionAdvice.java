@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -38,13 +37,13 @@ public class GlobalExceptionAdvice {
     }
 
 
-    @ExceptionHandler(AuthenticationException.class)
-    public ResponseEntity<?> applicationHandler(AuthenticationException e) {
-        log.error("Error occurs {}", e.toString());
-        // Unauthorized : 401번 인증 실패
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                .body(ErrorResponse.of(ErrorCode.UNAUTHORIZED.name()));
-    }
+//    @ExceptionHandler(AuthenticationException.class)
+//    public ResponseEntity<?> applicationHandler(AuthenticationException e) {
+//        log.error("Error occurs {}", e.toString());
+//        // Unauthorized : 401번 인증 실패
+//        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+//                .body(ErrorResponse.of(ErrorCode.UNAUTHORIZED.name()));
+//    }
 
 
     @ExceptionHandler(RuntimeException.class)

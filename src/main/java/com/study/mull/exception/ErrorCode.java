@@ -8,6 +8,9 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 public enum ErrorCode {
 
+
+
+
     // COMMON
     INVALID_PERMISSION(HttpStatus.UNAUTHORIZED, "Permission is invalid"),
     ACCESS_FORBIDDEN(HttpStatus.FORBIDDEN, "Access forbidden"),
@@ -82,9 +85,13 @@ public enum ErrorCode {
 
     // AUTHORIZATION
     MEMBER_NOT_INCLUDED_IN_PROJECT(HttpStatus.FORBIDDEN,"Member not included in project"),
-    INAPPROPRIATE_PERMISSION(HttpStatus.FORBIDDEN, "Unauthorized User");
+    INAPPROPRIATE_PERMISSION(HttpStatus.FORBIDDEN, "Unauthorized User"),
+
+    // social login
+    NOT_SUPPORT(HttpStatus.NOT_IMPLEMENTED, "This type is not supported.")
 
 
+    ;
 
 
 
