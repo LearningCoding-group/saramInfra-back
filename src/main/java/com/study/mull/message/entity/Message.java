@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -19,6 +20,7 @@ public class Message {
     @Column(name = "message_id")
     private long messageId;
 
+    @Column(name = "message")
     private String message;
 
     @Column(name = "message_status")
