@@ -21,6 +21,4 @@ public class MemberDto {
     private Boolean deleted_yn;
     private Boolean banned;
 
-
-
 }
