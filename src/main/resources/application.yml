@@ -14,9 +14,26 @@ spring:
       init:
         mode: always
 
+    jpa:
+      hibernate:
+        ddl-auto: none
+        type:
+          descriptor:
+            sql: true
+      properties:
+        hibernate:
+          format_sql: true
+
+
+
   mybatis:
     mapper-locations: classpath:mapper/**/*.xml
     type-aliases-package: com.study.mull
 
 
-
+oauth:
+  kakao:
+    client_id: ENC(qxyDwDQvc+0kUNXf5sxHVPNkYUDODC24q/InfecZvbwBRtOqLVPMToLJoNcqgRSk)
+    redirected_uri: http://localhost:3000/oauth/redirected/kakao
+    client_secret: ENC(zeZwVoUsief6WslUEOAqUh8YeFCzGtm8lrC1lWczXmhMTrzOYP7HDFf5YsCtGq18)
+    scope: profile_nickname, account_email
